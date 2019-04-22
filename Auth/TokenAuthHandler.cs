@@ -11,7 +11,7 @@ using Microsoft.Extensions.Options;
 
 namespace Auth
 {
-    public class TokenAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
+    public class TokenAuthHandler : AuthenticationHandler<TokenAuthHandlerOptions>
     {
         private readonly ITokenService _tokenService;
         public TokenAuthHandler(
@@ -27,7 +27,7 @@ namespace Auth
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
         {
-            var token = GetTokenFromHeaders("AuthToken");
+            var token = GetTokenFromHeaders(CustomTokenAuth.CustomTokenAuthHeader);
             var validationResult = _tokenService.IsTokenValid(token);
             if (validationResult)
             {

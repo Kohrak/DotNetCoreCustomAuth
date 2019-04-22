@@ -49,7 +49,7 @@ namespace Auth.Tests
             var context = new DefaultHttpContext();
             if (token != null)
             {
-                context.Request.Headers["AuthToken"] = token;
+                context.Request.Headers[CustomTokenAuth.CustomTokenAuthHeader] = token;
             }
 
             var handler = await InitHandlerAsync(context, tokenService);
