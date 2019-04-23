@@ -6,6 +6,7 @@ namespace Models
 {
     public class Post
     {
+        public int PostId;
         public int AuthorId;
         public string Title;
         public string Content;
