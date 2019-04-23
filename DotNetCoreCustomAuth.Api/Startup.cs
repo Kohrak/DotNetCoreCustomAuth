@@ -13,6 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Repository;
+using Repository.Interfaces;
+using Services;
+using Services.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace DotNetCoreCustomAuth.Api
@@ -51,6 +55,8 @@ namespace DotNetCoreCustomAuth.Api
                 c.DescribeAllEnumsAsStrings();
             });
 
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IPostsService, PostsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
