@@ -1,5 +1,6 @@
 ﻿using System.Net.Http;
 using Auth;
+using Auth.AuthScheme;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 

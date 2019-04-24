@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Auth.TokenService;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Auth
+namespace Auth.AuthScheme
 {
     public static class CustomTokenAuth
     {

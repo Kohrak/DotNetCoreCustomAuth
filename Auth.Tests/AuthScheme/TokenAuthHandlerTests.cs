@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Encodings.Web;
+﻿using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Auth.AuthScheme;
+using Auth.TokenService;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -10,7 +9,7 @@ using Microsoft.Extensions.Options;
 using Moq;
 using Xunit;
 
-namespace Auth.Tests
+namespace Auth.Tests.AuthScheme
 {
     public class TokenAuthHandlerTests
     {

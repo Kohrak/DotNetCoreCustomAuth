@@ -1,5 +1,5 @@
 ﻿
-namespace Auth
+namespace Auth.TokenService
 {
     public class SampleTokenService : ITokenService
     {
